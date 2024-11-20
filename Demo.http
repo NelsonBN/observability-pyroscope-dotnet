@@ -1,0 +1,48 @@
+@apiHost = http://localhost:8080
+@pyroscopeHost = http://localhost:4040
+
+
+###
+
+GET {{apiHost}}
+
+###
+
+GET {{apiHost}}/5b8f559b-1fd5-4608-8cd0-b5bf6f921815
+
+###
+
+POST {{apiHost}}
+Content-Type: application/json
+
+{
+    "name": "Fake User",
+    "email": "fake@fake.fk",
+    "phone": "1234"
+}
+
+###
+
+PUT {{apiHost}}/1730742a-2126-4b28-ab4a-36c55ae6951b
+Content-Type: application/json
+
+{
+    "name": "Fake User Update",
+    "email": "fake@Update.fk",
+    "phone": "12341112"
+}
+
+###
+
+DELETE {{apiHost}}/90c33bdd-5d6b-4e09-b01d-126904f723e7
+
+
+##### Pyroscope #####
+
+
+### Ready
+GET {{pyroscopeHost}}/ready
+
+
+### Metrics
+GET {{pyroscopeHost}}/metrics

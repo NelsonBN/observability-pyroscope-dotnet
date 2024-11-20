@@ -1,0 +1,13 @@
+apiVersion: 1
+
+datasources:
+
+  - name: Pyroscope
+    type: grafana-pyroscope-datasource
+    uid: pyroscope-uid
+    access: proxy
+    url: http://pyroscope:4040
+    isDefault: false
+    readOnly: false
+    jsonData:
+      minStep: '15s'
